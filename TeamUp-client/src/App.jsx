@@ -4,7 +4,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import NavBar from './components/NavBar'
 import HeroSection from './components/Hero'
 import WhyUs from './components/WhyUs'
-import AboutUs from './components/aboutus'
+import AboutUs from './components/AboutUs'
+import ContactUs from './components/ContactUs'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       <HeroSection /> 
       <WhyUs />
       <AboutUs />
+      <ContactUs />
+      <Footer />
     </Router>
   )
 }
