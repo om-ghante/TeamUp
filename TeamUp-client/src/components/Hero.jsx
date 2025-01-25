@@ -5,7 +5,9 @@ import { motion } from "motion/react"
 
 export default function HeroSection() {
   return (
-    <div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black flex-col">
+    <div 
+      id="home-section"
+      className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black flex-col">
       <motion.img
         src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?cs=srgb&dl=pexels-fauxels-3184291.jpg&fm=jpg"
         className="h-full w-full object-cover absolute inset-0 [mask-image:radial-gradient(circle,transparent,black_80%)] pointer-events-none"

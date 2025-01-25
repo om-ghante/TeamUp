@@ -1,7 +1,6 @@
 "use client"
 import React, { useState } from "react"
 import Logo from "../assets/teamwork-blue.png"
-import { NavLink } from "react-router-dom"
 
 export default function NavBar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -22,10 +21,10 @@ export default function NavBar() {
       </div>
 
       <div className="hidden md:flex space-x-6 text-lg mr-2 md:mr-10 lg:mr-10">
-        <NavLink to="#" className="hover:text-indigo-500 transition duration-200">Home</NavLink>
-        <NavLink to="#" className="hover:text-indigo-500 transition duration-200">Why TeamUp?</NavLink>
-        <NavLink to="#" className="hover:text-indigo-500 transition duration-200">About Us</NavLink>
-        <NavLink to="#" className="hover:text-indigo-500 transition duration-200">Contact Us</NavLink>
+        <a href="#home-section" className="hover:text-indigo-500 transition duration-200">Home</a>
+        <a href="#whyus-section" className="hover:text-indigo-500 transition duration-200">Why TeamUp?</a>
+        <a href="#aboutus-section" className="hover:text-indigo-500 transition duration-200">About Us</a>
+        <a href="#contactus-section" className="hover:text-indigo-500 transition duration-200">Contact Us</a>
       </div>
 
       <div className="md:hidden flex items-center">
@@ -56,34 +55,34 @@ export default function NavBar() {
         }`}
         style={{ zIndex: 999 }} 
       >
-        <NavLink
-          to="#"
+        <a
+          href="#home-section"
           className="text-white text-xl"
           onClick={toggleMobileMenu}
         >
           Home
-        </NavLink>
-        <NavLink
-          to="#"
+        </a>
+        <a
+          href="#whyus-section"
           className="text-white text-xl"
           onClick={toggleMobileMenu}
         >
           Why TeamUp?
-        </NavLink>
-        <NavLink
-          to="#"
+        </a>
+        <a
+          href="#aboutus-section"
           className="text-white text-xl"
           onClick={toggleMobileMenu}
         >
           About Us
-        </NavLink>
-        <NavLink
-          to="#"
+        </a>
+        <a
+          href="#contactus-section"
           className="text-white text-xl"
           onClick={toggleMobileMenu}
         >
           Contact Us
-        </NavLink>
+        </a>
       </div>
     </nav>
   )

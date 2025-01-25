@@ -3,15 +3,16 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import NavBar from './components/NavBar'
 import HeroSection from './components/Hero'
+import WhyUs from './components/WhyUs'
+import AboutUs from './components/aboutus'
 
 function App() {
   return (
     <Router>
       <NavBar />
-      <Routes>
-        <Route path="/" element={<HeroSection />} />
-        {/* Add more routes as needed */}
-      </Routes>
+      <HeroSection /> 
+      <WhyUs />
+      <AboutUs />
     </Router>
   )
 }
