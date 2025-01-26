@@ -10,7 +10,11 @@ const app = express();
 
 const originAPI = process.env.ORIGIN_API;
 
-app.use(cors());
+app.use(cors({
+    origin: process.env.ORIGIN_API,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+}));
 
 app.use(helmet());
 
