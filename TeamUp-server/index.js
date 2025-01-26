@@ -11,10 +11,18 @@ const app = express();
 const originAPI = process.env.ORIGIN_API;
 
 app.use(cors({
-    origin: originAPI,
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true
-}));    
+  origin: originAPI,
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true,
+  preflightContinue: true,  
+  optionsSuccessStatus: 200  
+}));
+
+app.use((req, res, next) => {
+  console.log('CORS headers set for:', req.headers.origin);
+  next();
+});
+
 
 app.use(helmet());
 
