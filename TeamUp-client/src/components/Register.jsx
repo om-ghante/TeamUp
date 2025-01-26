@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 
 export default function Register() {
+  const server_api = import.meta.env.VITE_SERVER_API;
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -21,7 +22,7 @@ export default function Register() {
     setSuccess("");
 
     try {
-      const response = await axios.post(`${import.meta.env.VITE_SERVER_API}/api/register`, formData);
+      const response = await axios.post(`${server_api}/api/register`, formData);
       if (response.data.token) {
         setSuccess("Registration successful! You can now log in.");
         navigate("/dashboard");

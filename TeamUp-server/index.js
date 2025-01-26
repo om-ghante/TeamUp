@@ -14,7 +14,7 @@ app.use(cors({
     origin: process.env.ORIGIN_API,
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
-}));
+}));    
 
 app.use(helmet());
 

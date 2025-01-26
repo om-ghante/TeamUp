@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const server_api = import.meta.env.VITE_SERVER_API;
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
@@ -20,7 +21,7 @@ const Login = () => {
     }
 
     try {
-      const response = await axios.post(`${import.meta.env.VITE_SERVER_API}/api/login`, {
+      const response = await axios.post(`${server_api}/api/login`, {
         email,
         password,
       });
