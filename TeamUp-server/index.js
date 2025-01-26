@@ -3,7 +3,6 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const helmet = require('helmet'); 
 const authRoutes = require('./routes/auth');
 
 const app = express();
@@ -22,10 +21,6 @@ app.use((req, res, next) => {
   console.log('CORS headers set for:', req.headers.origin);
   next();
 });
-
-
-app.use(helmet());
-
 
 app.use(bodyParser.json());
 
