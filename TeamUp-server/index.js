@@ -9,7 +9,7 @@ const app = express();
 
 
 app.use(cors({
-    origin: process.env.ORIGIN_API | 'http://localhost:5173',  
+    origin: process.env.ORIGIN_API || 'http://localhost:5173',  
     methods: ['GET', 'POST'], 
   }));
 
