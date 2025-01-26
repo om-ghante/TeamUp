@@ -16,7 +16,9 @@ app.use(cors({
 app.use(bodyParser.json());
 
 app.use('/api', authRoutes);
-
+app.get('/', (req, res) => {
+    res.send('Server Started');
+});
 mongoose
   .connect(process.env.DATABASE_API, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected to MongoDB'))
