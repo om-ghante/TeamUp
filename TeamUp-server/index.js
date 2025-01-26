@@ -7,7 +7,7 @@ const authRoutes = require('./routes/auth');
 
 const app = express();
 
-const originAPI = process.env.ORIGIN_API;
+const originAPI = process.env.ORIGIN_API || "*"; 
 
 app.use(cors({
   origin: originAPI,
