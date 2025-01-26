@@ -15,6 +15,14 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  skills: {
+    type: [String], // Array of strings to store selected skills
+    required: true,
+  },
+  languages: {
+    type: [String], // Array of strings to store selected programming languages
+    required: true,
+  },
 });
 
 // Password hashing before saving
