@@ -2,8 +2,14 @@
 import React from "react"
 import ColourfulText from "../ui/colourful-text"
 import { motion } from "motion/react"
+import { useNavigate } from "react-router-dom"
 
 export default function HeroSection() {
+  const navigate = useNavigate();
+
+  const handleSwitch = () => {
+    navigate("/login");
+  }
   return (
     <div 
       id="home-section"
@@ -21,7 +27,7 @@ export default function HeroSection() {
       <br />
       <button className="p-[3px] relative mt-5">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
-        <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+        <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent" onClick={handleSwitch}>
             Get Started
         </div>
       </button>
