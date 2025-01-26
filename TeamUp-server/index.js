@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const authRoutes = require('./routes/auth');
 const profileRoutes = require('./routes/profile');
+const userlistRoutes = require('./routes/userlist');
 
 const app = express();
 
@@ -28,6 +29,7 @@ app.use(bodyParser.json());
 
 app.use('/api', authRoutes);
 app.use('/read-api', profileRoutes);
+app.use('/userlist-api', userlistRoutes);
 app.get('/', (req, res) => {
   res.send('Server Started');
 });
