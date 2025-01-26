@@ -8,7 +8,7 @@ const authRoutes = require('./routes/auth');
 
 const app = express();
 
-const originAPI = process.env.ORIGIN_API || 'http://localhost:5173';
+const originAPI = process.env.ORIGIN_API;
 
 app.use(
   cors({
